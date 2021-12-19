@@ -23,3 +23,58 @@ export const Header = styled.h3`
     margin:5px 0 10px;
     text-align:center;
 `
+export const Message = styled.p`
+    color:#aaa;
+    font-size:15px;
+    font-weight:500;
+    margin: 0 0 36px;
+    text-align:center;
+`
+export const CloseSign = styled.div`
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    color:#323232;
+
+    &:before,
+    &:after{
+        position: absolute;
+        left:19px;
+        top:10px;
+        content:' ';
+        height:20px;
+        width:2px;
+        background-color:#323232;
+    }
+    &:before{
+        transform:rotate(45deg);
+    }
+    &:after{
+        transform:rotate(-45deg);
+    }
+`
+
+
+const Close_Button_SIZE = 40;
+
+export const CloseButton = styled.div`
+    position: absolute;
+    width: ${Close_Button_SIZE}px;
+    height:${Close_Button_SIZE}px;
+    background-color: #c8c8c8;
+    border-radius:50%;
+    cursor:pointer;
+
+    & > * {
+        opacity:1;
+    }
+    &:hover{
+        opacity:0.4;
+    }
+`
+
+export const DesktopCloseButton = styled(CloseButton)`
+    top:-${Close_Button_SIZE / 2}px;
+    left:calc(100% - ${Close_Button_SIZE /2}px)
+`

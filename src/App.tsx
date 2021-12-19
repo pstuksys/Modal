@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import BaseModalWrapper from "./modal/baseModalWrapper";
+import RWDModal from "./modal/RWDModal";
 
 const App = () => {
   const [isModalVisible, setModalVisible] = useState<boolean>(false);
@@ -15,7 +16,10 @@ const App = () => {
       <BaseModalWrapper
         isModalVisible={isModalVisible}
         onBackDropClick={toggleModal}
+        header="login"
+        message="Please log in"
       />
+      <RWDModal />
     </div>
   );
 };
